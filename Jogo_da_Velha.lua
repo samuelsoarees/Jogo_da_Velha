@@ -131,6 +131,37 @@ function tabuleiro:vencedor()
 end
 
 
+function tabuleiro:empate()
+	local cont = 0 
+	
+	for i=1 , #tabuleiro , 1 do
+	
+		for	s = 1 , 3 , 1 do
+		
+		if tabuleiro[i][s] == "x"  or tabuleiro[i][s] == "o"  then
+		
+			cont = cont + 1 
+			
+		end
+		
+		
+		
+		end
+
+	end
+	
+	if(cont == 9) then
+	
+		return true
+	
+	else 
+	
+		return false
+	
+	end
+	
+end
+
 function tabuleiro:main()
 --[[Esse metodo é o executavel]]
 
@@ -143,18 +174,37 @@ function tabuleiro:main()
 
 
 
+
+
+tabuleiro[1][1] = "x"
+tabuleiro[1][2] = "x"
+tabuleiro[1][3] = "x"
+tabuleiro[2][1] = "x"
+tabuleiro[2][2] = "o"
+tabuleiro[2][3] = "o"
+tabuleiro[3][1] = "x"
+tabuleiro[3][2] = "x"
+
+
+
 print(tabuleiro:desenharTabuleiro())
 
-
-
-repeat 
-
+print(tabuleiro:empate())
 
 
 
 
-until(vencedor~=true)
+
+
+
+--repeat 
+
+
+
+
+
+--until(vencedor~=true)
 
 end
 
-print(tabuleiro:main())
+tabuleiro:main()
