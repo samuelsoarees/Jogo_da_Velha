@@ -165,45 +165,60 @@ end
 function tabuleiro:main()
 --[[Esse metodo é o executavel]]
 
-
-
-
-
-
-
-
-
-
-
-
-tabuleiro[1][1] = "x"
-tabuleiro[1][2] = "x"
-tabuleiro[1][3] = "x"
-tabuleiro[2][1] = "x"
-tabuleiro[2][2] = "o"
-tabuleiro[2][3] = "o"
-tabuleiro[3][1] = "x"
-tabuleiro[3][2] = "x"
-
-
+ local	contador = 1;
 
 print(tabuleiro:desenharTabuleiro())
 
-print(tabuleiro:empate())
+repeat 
+	
+	local saida = false
+	
+	
+	repeat
+		local b =  false
+		
+		print("Digite a linha:")
+	
+		linha = io.read("number")
+	
+		print("Digite a coluna")
+	
+		coluna = io.read("number")
+		
+		if linha > 3 or linha < 1 or coluna > 3 or coluna < 1  then
+		print("Linhas ou colunas invalidas, digite novamente:")
+		
+		else
+		
+		b =  true
+		
+		end
 
-
-
-
-
-
-
---repeat 
-
-
-
-
-
---until(vencedor~=true)
+	until(b==true)
+		
+		
+		
+		if(contador%2 == 0) then
+		
+		tabuleiro[linha][coluna] = "o"
+	
+		else
+		
+		tabuleiro[linha][coluna] = "x"
+		
+		end
+	
+	contador = contador + 1
+	
+	if tabuleiro:vencedor()== true or tabuleiro:empate()== true  then
+	
+	saida = true
+	
+	end
+	
+	
+	print(tabuleiro:desenharTabuleiro())
+until(saida==true)
 
 end
 
