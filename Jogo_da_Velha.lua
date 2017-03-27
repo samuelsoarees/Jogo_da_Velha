@@ -188,10 +188,14 @@ repeat
 		if linha > 3 or linha < 1 or coluna > 3 or coluna < 1  then
 		print("Linhas ou colunas invalidas, digite novamente:")
 		
+		else if tabuleiro[linha][coluna] ==  "x" or tabuleiro[linha][coluna] ==  "o" then
+		print("Linhas ou colunas já preenchidas, digite novamente:")
+		
 		else
 		
-		b =  true
+		b = true
 		
+		end
 		end
 
 	until(b==true)
