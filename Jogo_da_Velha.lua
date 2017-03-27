@@ -5,7 +5,6 @@ tabuleiro = {
 	{" "," "," "}
 }
 
-
 function tabuleiro:desenharTabuleiro()
 --[[Esse metodo pega uma e desenhar um tabuleiro nela]]
 local visualizaTab = ""
@@ -44,7 +43,6 @@ visualizaTab = visualizaTab .. "\n" .. "1" .. " 2" .. " 3"
 return visualizaTab
 
 end
-
 
 function tabuleiro:verificaQualVencedor()
 
@@ -130,7 +128,6 @@ function tabuleiro:verificaQualVencedor()
 	
 end
 
-
 function tabuleiro:vencedor()
 	
 	--[[Esse metodo verifica se há algum vencedor]]
@@ -215,7 +212,6 @@ function tabuleiro:vencedor()
 	
 end
 
-
 function tabuleiro:empate()
 	local cont = 0 
 	
@@ -246,7 +242,6 @@ function tabuleiro:empate()
 	end
 	
 end
-
 
 function tabuleiro:main()
 --[[Esse metodo é o executavel]]
