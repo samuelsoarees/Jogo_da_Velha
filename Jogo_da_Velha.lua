@@ -292,11 +292,11 @@ repeat
 		
 		if(contador%2 == 0) then
 		
-		tabuleiro[linha][coluna] = "o"
+		tabuleiro[linha][coluna] = "x"
 	
 		else
 		
-		tabuleiro[linha][coluna] = "x"
+		tabuleiro[linha][coluna] = "o"
 		
 		end
 	
