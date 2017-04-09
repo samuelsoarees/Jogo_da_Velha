@@ -331,7 +331,17 @@ local sair =  false
 print("BEM VINDO AO JOGO DA VELHA")
 
 
+
+
+
 tabuleiro:main()
+
+
+
+
+
+
+
 
 
 if fimDeJogo == true then
